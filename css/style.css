@@ -5,7 +5,6 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 6000px;
 }
 
 /*============= NAVBAR =============*/
@@ -46,6 +45,13 @@ body {
 
 .navbar-inverse .navbar-collapse {
   border-color: transparent;
+  text-align: center;
+}
+/* HIDE SOCIAL MEDIA ICONS WHENE YOU CLICK ON HAMBURGER AND ALSO TO PREVENT TO APPEAR BESIDE NAV LISTES */
+@media screen and (min-width: 768px) {
+  .navbar-collapse .nav-icons {
+    display: none;
+  }
 }
 
 .navbar-nav .btn {
@@ -62,6 +68,20 @@ body {
 .navbar-nav .btn:hover {
   background-color: #fff !important;
   color: #233656 !important;
+}
+
+.navbar-nav .navbar-btn {
+  display: inline-block;
+}
+
+.navbar-nav .nav-icons h6 {
+  color: #fff;
+  font-weight: bold !important;
+  margin-top: 20px;
+}
+
+.navbar-nav .nav-icons img {
+  margin: 0 4px;
 }
 
 /*============= Sticky Navigation with Background Color =============*/
@@ -93,7 +113,7 @@ body {
 
 .vertical-center {
   min-height: 100vh;
-
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -143,3 +163,56 @@ body {
   background-color: #2B445F;
 }
 
+.slider-icons {
+  transform: rotate(90deg) translate(58%, -50%);
+  transform-origin: left top;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+@media screen and (max-width: 768px) {
+  .vertical-center .slider-icons {
+    display: none;
+  }
+}
+
+.icons-box {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: .8px;
+  display: flex;
+}
+
+.icons-box > span {
+  align-self: center;
+  font-size: 15px;
+}
+
+.icons-box > img {
+  align-self: center;
+  margin: 0 10px;
+}
+
+.social-icons a {
+  outline: none; 
+  border: 0; 
+  text-decoration: none;
+}
+
+a svg {
+  margin: 0 5px;
+  height: 40px;
+}
+
+svg rect,
+svg path {
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+svg:hover rect,
+svg:hover path {
+  fill: #415B76;
+}

@@ -8,12 +8,13 @@
 	//Sticky Navigation with Background Color
 	$(window).scroll(function(){
 		var top = $(window).scrollTop();
-		if(top>=400) {
+		if(top>=100) {
 			$("nav").addClass('secondary');
 		} else {
 			if($("nav").hasClass('secondary')) {
 				$("nav").removeClass('secondary');
 			}
 		}
-	})
+	});
+
 })(jQuery);
