@@ -5,6 +5,20 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  color: #2B2A2C;
+  height: 7000px;
+}
+
+/*============= UTILITIES =============*/
+.margin-top {
+  margin-top: 30px;
+}
+
+/*============= RESPONSIVE UTILITIES =============*/
+@media screen and (max-width: 767px) {
+  .responsive-mr {
+    margin-top: 30px;
+  }
 }
 
 /*============= NAVBAR =============*/
@@ -84,7 +98,7 @@ body {
   margin: 0 4px;
 }
 
-/*============= Sticky Navigation with Background Color =============*/
+/*============= Class That Jquery Uses For Sticky NavBar =============*/
 .secondary {
   background-color: #233656;
 }
@@ -215,4 +229,49 @@ svg path {
 svg:hover rect,
 svg:hover path {
   fill: #415B76;
+}
+
+/*============= SERVICES SECTION =============*/
+.service-section {
+  padding-top: 130px;
+}
+
+.service-section .section-title h2 {
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.service-section .section-title h2 small {
+  font-size: 50%;
+}
+
+.service-section .section-title {
+  margin-bottom: 100px;
+}
+
+.service-section .service-wrap {
+  padding: 60px 90px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+}
+@media screen and (max-width: 767px) {
+  .service-section .service-wrap {
+    padding: 60px 50px
+  }
+}
+
+.service-wrap .service-icon {
+  height: 50px;
+}
+
+.service-wrap h4 {
+  margin-top: 30px;
+}
+
+.service-wrap p {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #6A696B;
+  height: 60px;
+  line-height: 1.7;
 }
