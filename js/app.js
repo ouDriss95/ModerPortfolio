@@ -17,4 +17,26 @@
 		}
 	});
 
+	// Porfolio isotope and filter
+	var portfolioIsotope = $('.portfolio-container').isotope({
+		itemSelector: '.portfolio-item',
+		layoutMode: 'fitRows'
+	});
+
+	$('#portfolio-flters li').on('click', function () {
+		$("#portfolio-flters li").removeClass('filter-active');
+		$(this).addClass('filter-active');
+
+		portfolioIsotope.isotope({ filter: $(this).data('filter') });
+	});
+
+	// Magnific Popup
+	$('.portfolio-container').magnificPopup({
+		delegate: 'a.link-preview', // child items selector, by clicking on it popup will open
+		type: 'image',
+		gallery: {
+			enabled: true
+		}
+	});
+
 })(jQuery);
