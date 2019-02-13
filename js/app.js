@@ -9,11 +9,9 @@
 	$(window).scroll(function(){
 		var top = $(window).scrollTop();
 		if(top>=100) {
-			$("nav").addClass('secondary');
+			$("nav").css("background-color", "#233656");
 		} else {
-			if($("nav").hasClass('secondary')) {
-				$("nav").removeClass('secondary');
-			}
+			$("nav").css("background-color", "transparent");
 		}
 	});
 
@@ -29,10 +27,22 @@
 
 		portfolioIsotope.isotope({ filter: $(this).data('filter') });
 	});
+	/* On isotope v2 hidden class is not defined.
+	Add hidden class if item hidden, before initialising Isotope: */
+	var itemReveal = Isotope.Item.prototype.reveal;
+	Isotope.Item.prototype.reveal = function () {
+		itemReveal.apply(this, arguments);
+		$(this.element).removeClass('isotope-hidden');
+	};
+	var itemHide = Isotope.Item.prototype.hide;
+	Isotope.Item.prototype.hide = function () {
+		itemHide.apply(this, arguments);
+		$(this.element).addClass('isotope-hidden');
+	};
 
 	// Magnific Popup
 	$('.portfolio-container').magnificPopup({
-		delegate: 'a.link-preview', // child items selector, by clicking on it popup will open
+		delegate: '.portfolio-item:not(.isotope-hidden) a.link-preview', // child items selector, by clicking on it popup will open
 		type: 'image',
 		gallery: {
 			enabled: true
