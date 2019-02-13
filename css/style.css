@@ -7,7 +7,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #2B2A2C;
-  height: 7000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -532,4 +531,90 @@ svg:hover path {
 .about-cols .about-text .btn-ghost:hover {
   background-color: #233656;
   color: #fff;
+}
+
+/*============= TESTIMONIALS SECTION =============*/
+#testimonials {
+  padding-top: 130px
+}
+
+#testimonials .testi-box {
+  box-shadow: 0px 3px 30px -10px rgba(0, 0, 0, 0.397);
+  margin-top: 70px;
+  text-align: center;
+  width: 75%;
+  min-height: 366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 88px;
+  position: relative;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  #testimonials .testi-box {
+    padding: 45px 10px;
+  }
+}
+
+#testimonials .testi-box::before {
+  position: absolute;
+  content: "";
+  left: -20px;
+  width: 20px;
+  height: 290px;
+  background-color: #415B76;
+}
+#testimonials .testi-box::after {
+  position: absolute;
+  content: "";
+  right: -20px;
+  width: 20px;
+  height: 290px;
+  background-color: #415B76;
+}
+
+#testimonials .testi-box .testi-img {
+  height: 100px;
+  width: 100px;
+  align-self: center;
+  margin-bottom: 50px;
+  border: 9px solid rgba(65, 91, 118, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 12px rgba(123, 155, 166, 0.5);
+  box-sizing: initial;
+}
+
+#testimonials .testi-img img {
+  width: 100%;
+}
+
+#testimonials .testi-box h4 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+#testimonials .testi-box p {
+  line-height: 1.7;
+  color: #6A696B;
+  font-weight: 500;
+}
+
+#testimonials .owl-nav, #testimonials .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#testimonials .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(35,54,86, .15);
+}
+
+#testimonials .owl-dot.active {
+  background-color: #233656;
 }
