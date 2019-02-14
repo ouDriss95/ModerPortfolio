@@ -157,6 +157,7 @@ h2 small {
 @media screen and (min-width: 768px) {
   .jumbotron h1 {
     font-size: 51px !important;
+    line-height: .9;
   }
 }
 
@@ -169,6 +170,7 @@ h2 small {
 .slider-content .slider-paragraph {
   font-size: 18px;
   color: rgba(238, 244, 242, 0.70);
+  margin-top: 10px;
 }
 
 .slider-content .btn {
@@ -188,10 +190,10 @@ h2 small {
 }
 
 .slider-icons {
-  transform: rotate(90deg) translate(58%, -50%);
+  transform: rotate(90deg) translate(-50%, 0);
   transform-origin: left top;
   position: absolute;
-  top: 50px;
+  top: 50%;
   left: 0px;
 }
 @media screen and (max-width: 768px) {
@@ -617,4 +619,54 @@ svg:hover path {
 
 #testimonials .owl-dot.active {
   background-color: #233656;
+}
+
+/*============= CALL TO ACTION SECTION =============*/
+.call-to-action {
+  padding: 40px 0;
+  background-color: #EEF4F2;
+  margin-top: 130px;
+}
+
+.call-to-action p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.call-to-action a.btn {
+  color: #fff;
+  background-image: none;
+  white-space: nowrap;
+  border-radius: 50px;
+  transition: .2s ease-in;
+  border: none;
+  transition: .2s ease-in;
+  border: 2px solid #233656;
+  font-weight: bold;
+  padding: 10px 55px;
+  background-color: #233656;
+  float: right;
+}
+
+.call-to-action a.btn:hover {
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.20);
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .call-to-action {
+    text-align: center;
+  }
+
+  .call-to-action a.btn {
+    float: initial;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .call-to-action a.btn {
+    padding: 10px 35px;
+  }
 }
