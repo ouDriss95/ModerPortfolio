@@ -76,7 +76,7 @@ h2 small {
   text-align: center;
 }
 /* HIDE SOCIAL MEDIA ICONS WHENE YOU CLICK ON HAMBURGER AND ALSO TO PREVENT TO APPEAR BESIDE NAV LISTES */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .navbar-collapse .nav-icons {
     display: none;
   }
@@ -194,7 +194,7 @@ h2 small {
   transform-origin: left top;
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 18px;
 }
 @media screen and (max-width: 768px) {
   .vertical-center .slider-icons {
@@ -260,6 +260,11 @@ svg:hover path {
 @media screen and (max-width: 767px) {
   .service-section .service-wrap {
     padding: 60px 50px
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 991px) {
+  .service-section .service-wrap {
+    padding: 30px 20px
   }
 }
 
@@ -630,8 +635,8 @@ svg:hover path {
 
 .call-to-action p {
   margin: 0;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .call-to-action a.btn {
@@ -669,4 +674,56 @@ svg:hover path {
   .call-to-action a.btn {
     padding: 10px 35px;
   }
+}
+
+/*============= FOOTER =============*/
+footer {
+  padding: 30px 0;
+  background-color: #415B76;
+}
+
+footer .logo {
+  margin-top: 5px;
+}
+
+footer .nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list li a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.nav-list li a:hover,
+.nav-icons li a:hover {
+  background-color: transparent;
+}
+
+footer .nav-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 990px) {
+  footer .logo,
+  footer .nav-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .nav-list {
+    margin-top: 15px;
+  }
+}
+
+footer hr {
+  width: 50%;
+  margin: 20px auto;
+}
+
+footer .footer-copyright {
+  text-align: center;
+  color: #fff;
 }
