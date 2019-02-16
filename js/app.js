@@ -2,7 +2,7 @@
 	'use strict';
 	//Ripples Water Effect
 	$('.slider').ripples({
-		dropRadius: 10,
+		dropRadius: 16,
 		perturbance: 0.09,
 	});
 	
