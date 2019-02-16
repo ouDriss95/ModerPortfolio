@@ -1,5 +1,6 @@
-(function ($) {
+(function () {
 	'use strict';
+	
 	//Ripples Water Effect
 	$('.slider').ripples({
 		dropRadius: 16,
@@ -46,9 +47,16 @@
 		delegate: '.portfolio-item:not(.isotope-hidden) a.link-preview', // child items selector, by clicking on it popup will open
 		type: 'image',
 		gallery: {
-			enabled: true
-		}
+			enabled: true,
+			tPrev: "",
+			tNext: "",
+			tCounter: "%curr% / %total%"
+		},
+		removalDelay: 100,
+		mainClass: "mfp-fade",
+		fixedContentPos: false
 	});
+	
 
 	// Testimonials carousel (uses the Owl Carousel library)
 	$(".testimonials-carousel").owlCarousel({
