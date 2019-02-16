@@ -1,6 +1,6 @@
-(function () {
+$(function () {
 	'use strict';
-	
+
 	//Ripples Water Effect
 	$('.slider').ripples({
 		dropRadius: 16,
@@ -68,4 +68,4 @@
 		autoplayHoverPause: true
 	});
 
-})(jQuery);
+});
