@@ -2,8 +2,8 @@
 	'use strict';
 	//Ripples Water Effect
 	$('.slider').ripples({
-		dropRadius: 5,
-		perturbance: 0.02,
+		dropRadius: 10,
+		perturbance: 0.09,
 	});
 	
 	//Sticky Navigation with Background Color
